@@ -27,6 +27,7 @@ const data = {
         {
           title: "Sales",
           url: "/dashboard/sale",
+          isActive: true,
         },
         // {
         //   title: "Project Structure",
@@ -195,7 +196,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenuSub>
                     {item.items.map((item) => (
                       <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive}>
+                        <SidebarMenuSubButton asChild isActive={item.isActive??false}>
                           <Link href={item.url}>{item.title}</Link>
                         </SidebarMenuSubButton>
                       </SidebarMenuSubItem>
