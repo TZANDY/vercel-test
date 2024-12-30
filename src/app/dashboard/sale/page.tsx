@@ -1,7 +1,14 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 export default function Page(){
     return (
         <div>
-        <h1>Sales</h1>
+        <div >
+        <Input placeholder="Search for a product" />
+        <Button>Guardar</Button>
+
+        </div>
         </div>
     )
 }
