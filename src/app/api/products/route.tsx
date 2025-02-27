@@ -30,28 +30,3 @@ export async function GET() {
         });
     }
 }
-
-export async function POST(req) {
-    try {
-        const response = await fetch(`${url}/objects`,{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(req.body)
-        });
-        if(!response.ok){
-            return NextResponse.json({
-                status: response.status,
-                statusText: response.statusText
-            });
-        }
-        const data = await response.json();
-        return NextResponse.json(data,{status: response.status});
-    } catch (error) {
-        return NextResponse.json({
-            status: 500,
-            statusText: 'Internal Server Error. '+error,
-        });
-    }
-}
