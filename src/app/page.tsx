@@ -1,12 +1,16 @@
+import NavBarItem from "@/components/app-navbar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <Button>
-      <Link href="/dashboard">
-        Go to Dashboard
-      </Link>
-    </Button>
+    <>
+      <NavBarItem />
+      <div className="flex justify-center items-center h-screen">
+        <Link href="/dashboard">
+          <Button>Go to Dashboard</Button>
+        </Link>
+      </div>
+    </>
   );
 }

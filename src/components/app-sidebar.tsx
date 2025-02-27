@@ -55,10 +55,11 @@ const data = {
           url: "#",
           isActive: false,
         },
-        // {
-        //   title: "Caching",
-        //   url: "#",
-        // },
+        {
+          title: "Categories",
+          url: "/dashboard/categories",
+          isActive: false,
+        },
         // {
         //   title: "Styling",
         //   url: "#",
